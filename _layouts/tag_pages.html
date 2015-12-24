@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<main class="main archive">
+  
+  <a class="box" href="{{site.baseurl}}/blog/">
+    <h1 class="page-heading">x</h1>
+    <span>Blog</span>
+  </a>
+  
+  {% include navigation.html %}
+  
+  <div class="post-list">
+    <span class="archive-title"># {{ page.title }}</span>
+    <ul>
+    {% for post in site.tags.[page.type] %}
+      <li>
+        <span class="post-meta">
+          {{ post.date | date: "%-d %b %Y" }}
+        </span>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  
+</main>

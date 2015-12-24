@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+description: Blognya Nadymain. Tempat bermain-main.
+sitemap: false
+---
+
+<main class="main blog">
+
+  <a class="box" href="{{site.baseurl}}/blog/">
+    <h1 class="page-heading">Blog</h1>
+    <span>=</span>
+  </a>
+  
+  {% include navigation.html %}
+  
+  <div class="post-list">
+    <ul>
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  
+  {% include paginator.html %}
+
+</main>

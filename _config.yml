@@ -1,0 +1,53 @@
+# site
+title: NadyMain
+email: nadymain@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    Tempat nongkrong di GitHub untuk mendokumentasi hal-hal yang berkaitan dengan web dan desain, baik itu seputar wacana, tutorial dan inspirasi.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://nadymain.github.io" # the base hostname & protocol for your site
+
+# site navigation
+navigation:
+- text: Umum
+  url: /blog/umum/
+- text: Kode
+  url: /blog/kode/
+- text: Desain
+  url: /blog/desain/
+  
+subnavigation:
+- text: Tentang
+  url: /tentang/
+- text: Portfolio
+  url: /portfolio/
+- text: Label
+  url: /label/
+
+# settings
+permalink: "/blog/:title.html"
+timezone: Asia/Jakarta
+encoding: "utf-8"
+
+# gems
+gems: [jekyll-paginate, jekyll-sitemap]
+
+# paginator
+paginate: 3
+paginate_path: "/blog/page-:num/"
+
+# social
+github_username: nadymain
+
+# conversion
+markdown: kramdown
+
+# html compressed
+compress_html:
+  clippings: all
+
+# css compressed
+sass:
+  style: compressed
+
+# exclude
+exclude: [README.md]

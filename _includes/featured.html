@@ -1,0 +1,18 @@
+{% if page.image %}
+<div class="featured">
+    <div class="w-featured">
+        <img src="{{ site.baseurl }}/img/{{ page.image }}" alt="">
+    </div>
+</div>
+{% endif %}
+
+{% if page.youtube %}
+<div class="featured">
+    <div class="w-featured">
+        <div class="iframe">
+          <iframe src="https://www.youtube.com/embed//{{ page.youtube }}"></iframe>
+        </div>
+    </div>
+    <p class="author">Video: {{ page.youtube-author }}</p>
+</div>
+{% endif %}

@@ -1,0 +1,44 @@
+---
+layout: default
+title: Portfolio
+sitemap: false
+---
+
+<main class="main portfolio">
+  
+  <a class="box" href="{{site.baseurl}}/blog/">
+    <h1 class="page-heading">x</h1>
+    <span>Blog</span>
+  </a>
+  
+  {% include navigation.html %}
+  
+  <article class="article">
+  
+    <header class="post-header">
+      <h1 class="post-title">Portfolio</h1>
+    </header>
+  
+    <ul class="portfolio-content">
+        {% for portfolio in site.data.portfolio %}
+        <li>
+            <p class="label"># {{ portfolio.label }}</p>
+            <div class="img">
+              <img src="{{ site.baseurl }}/img/{{ portfolio.image }}" alt="{{ portfolio.name }}">
+            </div>
+            {% if portfolio.link %}
+              <a href="{{ portfolio.link }}">
+                  <h2>{{ portfolio.name }}</h2>
+                  <p>{{ portfolio.desc }}</p>
+              </a>
+             {% else %}
+                <h2>{{ portfolio.name }}</h2>
+                <p>{{ portfolio.desc }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    
+  </article>
+  
+</main>

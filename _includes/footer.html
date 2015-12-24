@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <nav class="sub-navigation">
+    <ul>
+        {% assign url = page.url|remove:'index.html' %}
+        {% for link in site.subnavigation %}
+        <li {% if url == link.url %}class="current"{% endif %}>
+           <a href="{{ link.url }}">{{ link.text }}</a></li>
+        {% endfor %}
+    </ul>
+  </nav>
+</footer>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /css/
+Sitemap: http://nadymain.github.io/sitemap.xml

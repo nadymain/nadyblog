@@ -1,0 +1,13 @@
+<footer class="post-footer">
+    
+    {% assign tagsize = page.tags.size %}
+    {% if tagsize != 0 %}
+    <div class="meta-footer">
+        <span>Label: </span>
+        {% for tag in page.tags %}
+        <a href='{{ tag | downcase | slugify }}/'>{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+</footer>

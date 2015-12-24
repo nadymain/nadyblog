@@ -1,0 +1,26 @@
+---
+layout: default
+title: Label
+---
+
+<main class="main list-tag">
+
+  <a class="box" href="{{site.baseurl}}/blog/">
+    <h1 class="page-heading">x</h1>
+    <span>Blog</span>
+  </a>
+  
+  {% include navigation.html %}
+  
+    <div class="tag-list">
+      <span class="archive-title"># {{ page.title }}</span>
+        <ul>
+            {% for tag in site.tags %}
+                <li><a href="/blog/{{ tag | first | downcase | slugify }}/">
+                    {{ tag | first }}
+                </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</main>

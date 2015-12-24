@@ -1,0 +1,52 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+body{
+    font-family:sans-serif;
+    font-size:13px;
+    line-height:1;
+    margin:100px 0 0;
+    color:#333;
+    text-align:center;
+}
+h1{
+    margin:0 0 5px;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:24px;
+    letter-spacing:12px;
+    padding-top:215px;
+    position:relative;
+    left:6px;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+p{
+    margin:0 0 15px;
+}
+.kotak{
+    height:280px;
+    width:280px;
+    display:block;
+    margin:0 auto 20px;
+    background:#333;
+    color:#fff;
+}
+.kotak span{
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:4px;
+    display:none;
+}
+.kotak:hover span{
+    display:inline-block;
+}
+.icon-github{
+    height:28px;
+    width:28px;
+    display:inline-block;
+}

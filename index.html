@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="id">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }} | Tempat Nongkrong di GitHub</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/img/icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/img/icon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/img/icon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/img/icon/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="{{ "/css/home.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  </head>
+  
+  <body>
+    <div class="home">
+      <a class="kotak" href="{{site.baseurl}}/blog/">
+        <h1>{{ site.title }}</h1>
+        <span>Blog</span>
+      </a>
+      <p>Tempat Nongkrong di GitHub</p>
+      {% if site.github_username %}
+          {% include icon-github.html username=site.github_username %}
+      {% endif %}
+    </div>
+  </body>
+  
+</html>

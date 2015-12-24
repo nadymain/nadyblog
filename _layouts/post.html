@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<main class="main post">
+  
+  <a class="box" href="{{site.baseurl}}/blog/">
+    <h1 class="page-heading">x</h1>
+    <span>Blog</span>
+  </a>
+  
+  {% include navigation.html %}
+  
+  <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <header class="post-header">
+      <span class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%-d %b %Y" }}
+        </time>
+      </span>
+      <h2 class="post-title" itemprop="name headline">
+        {{ page.title }}
+      </h2>    
+    </header>
+    
+    {% include featured.html %}
+    
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+    
+    {% include meta-footer.html %}
+    
+  </article>
+  
+  {% include prev-next.html %}
+  
+</div>
