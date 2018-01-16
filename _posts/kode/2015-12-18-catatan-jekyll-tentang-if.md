@@ -1,6 +1,6 @@
 ---
 layout          : post
-title           : Jekyll If-nya
+title           : Tentang If-nya Jekyll
 date            : 2015-12-18
 tags            : [Kode, Jekyll]
 ---
